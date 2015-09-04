@@ -1,2 +1,2 @@
-# JC2MP-Companions
+# JC2MP Companions
 ClientActor usage example with bike passengers.
