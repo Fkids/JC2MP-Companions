@@ -22,7 +22,7 @@ function cCompanions:onPostTick()
 			if IsValid(actor, false) then
 				if IsValid(actor, true) then
 					if vehicle:GetDriver() then
-						actor:SetPosition(vehicle:GetPosition() + vehicle:GetAngle() * Vector3(0, 0.95, 0.7 - vehicle:GetLinearVelocity():Length() / 30))
+						actor:SetPosition(vehicle:GetPosition() + vehicle:GetAngle() * Vector3(0, 0.95, 0.7 - math.min(vehicle:GetLinearVelocity():Length() / 30, 0.7)))
 						actor:SetAngle(vehicle:GetAngle())
 						actor:SetBaseState(AnimationState.SRidingMc)
 					else
